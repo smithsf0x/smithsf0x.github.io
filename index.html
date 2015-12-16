@@ -1,1 +1,58 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+	<title>smithsf0x</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="css/kube.css">
+
+	<style type="text/css">
+		.nav-rad{
+			display: none;
+		}
+		.nav-label{
+			margin-left: 4em;
+			cursor: pointer;
+		}
+		.content{
+			height: 100%;
+			width: 100%;
+			position: fixed;
+			z-index: 5;
+			background-color: gray;
+		}
+		.content:first-child{
+			z-index: 6;
+		}
+
+		#nav-rad-menu:checked ~ div.page-body div.content-home{
+			z-index: 10;
+		}
+		#nav-rad-projects:checked ~ div.page-body div.content-projects{
+			z-index: 10;
+		}
+	</style>
+
+</head>
+<body class="light">
+
+
+	<div class="title light text-centered">smithsf0x</div>
+
+
+	<input name="nav-rad" type="radio" id="nav-rad-home" value="0" class="nav-rad"></input>
+	<label class="nav-label big" for="nav-rad-home"> Home </label>
+	<input name="nav-rad" type="radio" id="nav-rad-projects" value="0" class="nav-rad"></input>
+	<label class="nav-label big" for="nav-rad-projects"> Projects </label>
+
+	<div class="page-body">
+		<div class="content-menu content">
+			menu
+		</div>
+		<div class="content-projects content">
+			projects
+		</div>
+	</div>
+
+</body>
+</html>

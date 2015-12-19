@@ -2,7 +2,7 @@
 * @Author: smithsf0x
 * @Date:   2015-12-17 20:37:54
 * @Last Modified by:   smithsf0x
-* @Last Modified time: 2015-12-18 13:18:32
+* @Last Modified time: 2015-12-19 13:37:48
 */
 
 html,
@@ -27,7 +27,7 @@ label {
    position: fixed;
    top: 10px;
    left: 40px;
-   z-index: 1;
+   z-index: 2;
    display: block;
    font-size:4em;
    cursor: pointer;
@@ -43,6 +43,8 @@ input[type=checkbox]:checked ~ label {
    outline-style: solid;
    outline-width: 1px;
    outline-color: rgba(0, 0, 0, 0.2);
+   background-color: white;
+   z-index: 1;
 }
 input[type=checkbox]:checked ~ .content {
    transform: translate3d(250px, 0, 0);
@@ -56,7 +58,7 @@ input[type=checkbox]:checked ~ .slide-menu .menu li {
 .slide-menu {
    transform: translate3d(-250px, 0, 0);
    position: absolute;
-   width: 250px;
+   width: 248px;
    left: 0;
    height: 100%;
    transition: all .4s;

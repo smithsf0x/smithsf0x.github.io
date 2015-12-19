@@ -2,7 +2,7 @@
 * @Author: smithsf0x
 * @Date:   2015-12-17 20:37:54
 * @Last Modified by:   smithsf0x
-* @Last Modified time: 2015-12-17 22:42:59
+* @Last Modified time: 2015-12-18 13:18:32
 */
 
 html,
@@ -17,13 +17,14 @@ body {
 #container {
    display: flex;
    min-height: 100%;
+   height: 100%;
 }
 input[type=checkbox] {
    position: absolute;
    opacity: 0;
 }
 label {
-   position: absolute;
+   position: fixed;
    top: 10px;
    left: 40px;
    z-index: 1;
@@ -37,7 +38,6 @@ input[type=checkbox]:checked ~ label {
 }
 .content {
    width:100%;
-   padding: 40px;
    transition: transform .4s;
    outline-offset: 1px;
    outline-style: solid;

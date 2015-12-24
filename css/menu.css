@@ -2,26 +2,20 @@
 * @Author: smithsf0x
 * @Date:   2015-12-17 20:37:54
 * @Last Modified by:   smithsf0x
-* @Last Modified time: 2015-12-19 13:37:48
+* @Last Modified time: 2015-12-24 13:02:56
 */
-
-html,
-body {
-   height: 100%;
-}
-body {
-   margin: 0;
-   padding: 0;
+body{
    overflow-x: hidden;
+   height: 100%;
 }
 #container {
    display: flex;
-   min-height: 100%;
    height: 100%;
 }
 input[type=checkbox] {
    position: absolute;
    opacity: 0;
+   display: hidden;
 }
 label {
    position: fixed;
@@ -39,10 +33,6 @@ input[type=checkbox]:checked ~ label {
 .content {
    width:100%;
    transition: transform .4s;
-   outline-offset: 1px;
-   outline-style: solid;
-   outline-width: 1px;
-   outline-color: rgba(0, 0, 0, 0.2);
    background-color: white;
    z-index: 1;
 }
@@ -57,7 +47,7 @@ input[type=checkbox]:checked ~ .slide-menu .menu li {
 }
 .slide-menu {
    transform: translate3d(-250px, 0, 0);
-   position: absolute;
+   position: fixed;
    width: 248px;
    left: 0;
    height: 100%;

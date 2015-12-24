@@ -1,0 +1,16 @@
+CACHE MANIFEST
+# 2025-12-19 Version 1.0
+
+CACHE:
+index.html
+css/index.css
+css/kube.css
+css/menu.css
+js/index.js
+media/ios/splashscreen.png
+media/ios/logo.png
+
+NETWORK:
+
+FALLBACK:
+*.html /offline.html

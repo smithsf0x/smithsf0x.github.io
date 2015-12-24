@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+<html manifest=„config/cache.manifest“>
 <html>
 <head>
 	<title>BLA</title>
+
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name=„apple-mobile-web-app-capable“ content=„yes“ />
 
     <script src="js/index.js"></script>
+
+    <link rel=„apple-touch-icon“ href=„images/icon.png“ />
+ 	<link rel=„apple-touch-startup-image“ href=„images/splashscreen.png“ />
 
     <link rel="stylesheet" type="text/css" href="css/kube.css">
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
@@ -22,36 +28,86 @@
 		left: 0px;
 		width: 100%;
 	}
+	.table-main tr:first-child{
+		height: 30px;
+	}
+	.table-main tr:first-child td:first-child{
+		padding-bottom: 0px;
+		text-align: center;
+	}
+	.header{
+		margin: 0px;
+		padding: 0px;
+		margin-top: 16px;
+		margin-bottom: 5px;
+		padding-bottom: 25px;
+		line-height: 0px;
+		font-size: 3.2em;
+	}
+	.table-main tr:last-child td:last-child{
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	.content_body{
+		width: 80%;
+		min-height: calc(100% + 5em + 25px);
+		margin-left: auto;
+		margin-right: auto;
+		background-color: whitesmoke;
+		padding: 2em;
+	}
+
 	.title.header{
 
 	}
 
-	.page{
+	#page{
 		width: 100%;
 		height: 100%;
-		overflow-x: hidden;
 		overflow-y: auto;
 	}
-
+	#hide-scroll-bar{
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		width: 15px;
+		height: 100%;
+		background-color: white;
+		z-index: 255;
+	}
+	.footer{
+		width: 80%;
+		height: 4em;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 1em;
+		background-color: white;
+	}
+	.footer div{
+		background-color: whitesmoke;
+		height: 100%;
+		width: 100%;
+		text-align: center;
+	}
 
 	</style>
 
 
-
 </head>
 <body class="light" >
+	<div id="hide-scroll-bar" ></div>
 	<div id="container">
 	  	<input id="toggle" type="checkbox"><label for="toggle" >&equiv;</label>
-	  	<div class="content">
+	  	<div class="content" >
 	  		<table class="table-simple table-main">
-	  			<tr style="height: 40px;">
-	  				<td style="text-align: center;">
-	  					<h1 class="title header thin">BLA</h1>
+	  			<tr>
+	  				<td >
+	  					<h1 class=" header thin">BLA</h1>
 	  				</td>
 	  			</tr>
 	  			<tr>
 	  				<td>
-	  					<div class="page" id="page" >
+	  					<div class="page normal" id="page">
 
 	  					</div>
 	  				</td>
@@ -63,12 +119,13 @@
 	    	<nav class="menu">
 		      	<li><a href="#" onclick="pageSet('content_home', 'page')">Home</a></li>
 		      	<li><a href="#" onclick="pageSet('content_projects', 'page')">Projects</a></li>
+		      	<li><a href="#" onclick="pageSet('content_downloads', 'page')">Downloads</a></li>
 	    	</nav>
 	  	</div>
 	</div>
 
 	<div class="hide" id="content_home">
-  		<div style="width: 80%; margin-left: auto; margin-right: auto; background-color: whitesmoke; padding: 2em;">
+  		<div class="content_body">
 			<h2>BLU</h2>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 			Dufoesynyjoe naf dybi tacafonomy def moefibaci jacim lito malodumil fen.
@@ -97,36 +154,73 @@
 			Lime fyli leb da je labaloed, jaboem, hi bi dob mid lic puco paqua.
 			Luquoe myfenim nenefe doelyl, mef bapacoem denidili, joef, dulin jiqu fulicoecibe.
 		</div>
+		<div class="footer">
+			<div>
+			<br>
+				Copyright <script>curYear()</script>  by smithsf0x
+			</div>
+		</div>
   	</div>
   	<div class="hide" id="content_projects">
-  		<div style="width: 80%; margin-left: auto; margin-right: auto; background-color: whitesmoke; padding: 2em;">
+  		<div class="content_body">
 			<h2>Projects</h2>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-			Dufoesynyjoe naf dybi tacafonomy def moefibaci jacim lito malodumil fen.
-			Hifyr te, quesohef lacebi queda, vof li, lyj baja, da mijirehyr detivesu.
-			Sese dira vel de mamy lime, paluboe mahoevaje so hemyferel hoelar dilam dejihibe ri.
-			Tuma mifidebalo hi, fife, coemef se sob, focoeh vilelequaha pibapaf jile bi.
-			<br />
-			<br />
-			Quoedumoen did, con, di moem mosem lenibif hec, mone lara moe licanibid poec le jehiset.
-			Facim meni lal, modese lyra quab fula boe bulasihoeh bif.
-			Detahela, marebyd jet cahed medi lef belim, mydob, voenod lefat dalabab diti mebilofequ.
-			Befisa fo, li, be dililimi tanemo bi, dy nesehequ, falamefep hosadun dem.
-			Fidoe queb dudyque demyl hibib nic disema leh bemamamesoe delepop da.
-			<br />
-			<br />
-			Boebe vo lofomy safera miquyb ja la larad, quevil coeder lihoed revepoeda cifu.
-			Voebemoehot, divil di, dady ha fohu du bamidypali, lem joetamyr, dajys heneteme me fyf.
-			Quivebufima quelab demihef mafiderif jefe, debily soel, bosim limisyquan sub dymen que tec.
-			Lelasofad rira beti bi nisu fu, fed beb, ses, lemita lequisofy bale debalaf.
-			Mes, sa ded pamoetoep bebeloel ve semahete lale macid defade.
-			<br />
-			<br />
-			Beb, sevadej hebyj, maj bapebar ladudedot, jafetyb sal lo hoepoelameri dev.
-			Mif damum cehoefi pybad, mole quuhidi jaf min boe dadu que quile loefibi.
-			Fi dimiboqu deda me moe milij, mes ra bylequor vebad bapaluta toe.
-			Lime fyli leb da je labaloed, jaboem, hi bi dob mid lic puco paqua.
-			Luquoe myfenim nenefe doelyl, mef bapacoem denidili, joef, dulin jiqu fulicoecibe.
+			<hr>
+			<blocks cols="1">
+				<div style="width: 80%">
+					<h3>Installing PSPSDK on Mavericks</h3>
+					Pre
+					<ul>
+						<li>Installing MacPorts</li>
+						<li>sudo port install autoconf automake bison flex ncurses readline subversion texinfo wget mpfr doxygen</li>
+						<li>Install <a href="http://ftp.gnu.org/gnu/automake/automake-1.9.6.tar.bz2">automake-1.9</a></li>
+						<li>libusb
+							<ul>
+								<li>wget --continue http://downloads.sourceforge.net/project/libusb/libusb-0.1%20%28LEGACY%29/0.1.12/libusb-0.1.12.tar.gz
+									-O libusb-legacy.tar.gz</li>
+								<li>mkdir libusb-legacy</li>
+								<li>tar --strip-components=1 --directory=libusb-legacy -xzf libusb-legacy.tar.gz</li>
+								<li>cd libusb-legacy</li>
+								<li>CPPFLAGS=-m32 LDFLAGS=-m32 ./configure</li>
+								<li>make</li>
+								<li>sudo make install</li>
+							</ul>
+						</li>
+						<li>bash_profile
+							<ul>
+								<li>
+									export PSPDEV="/usr/local/pspdev"<br>
+									export PSPSDK="$PSPDEV/psp/sdk"<br>
+									export PSPPATH="$PSPDEV/bin:$PSPDEV/psp/bin:$PSPSDK/bin"<br>
+									export PATH="/opt/local/bin:$PATH:$PSPPATH"
+								</li>
+							</ul>
+						</li>
+						<li>sudo ./toolchain-sudo.sh 1 2 3 4 5 6</li>
+						<li>sudo ./toolchain-sudo.sh 7 8 10 12</li>
+						<li>more
+							<ul>
+								<li>install PSPLink</li>
+								<li>install PSPTools</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<br />
+					<br />
+					Beb, sevadej hebyj, maj bapebar ladudedot, jafetyb sal lo hoepoelameri dev.
+					Mif damum cehoefi pybad, mole quuhidi jaf min boe dadu que quile loefibi.
+					Fi dimiboqu deda me moe milij, mes ra bylequor vebad bapaluta toe.
+					Lime fyli leb da je labaloed, jaboem, hi bi dob mid lic puco paqua.
+					Luquoe myfenim nenefe doelyl, mef bapacoem denidili, joef, dulin jiqu fulicoecibe.
+				</div>
+			</blocks>
+		</div>
+		<div class="footer">
+			<div>
+			<br>
+				Copyright <script>curYear()</script>  by smithsf0x
+			</div>
 		</div>
   	</div>
 </body>
